@@ -23,7 +23,7 @@ namespace ProiectMediiTry5.Pages.Jobs
 
         public async Task OnGetAsync()
         {
-            Job = await _context.Job.ToListAsync();
+            Job = await _context.Job.Include(b => b.Project).ToListAsync();
         }
     }
 }

@@ -25,6 +25,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Job[0].Finalizat)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].Project.ProjectName)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -43,6 +46,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Finalizat)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Project.ProjectName)
+                </td>
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

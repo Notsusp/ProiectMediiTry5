@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -21,6 +22,8 @@ namespace ProiectMediiTry5.Pages.Jobs
 
         public IActionResult OnGet()
         {
+            ViewData["ProjectID"] = new SelectList(_context.Set<Project>(), "ID",
+"ProjectName");
             return Page();
         }
 

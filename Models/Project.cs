@@ -8,6 +8,7 @@
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public ICollection<Employee>? Employees { get; set; }
+        public ICollection<Job>? Jobs { get; set; }
 
     }
 }
