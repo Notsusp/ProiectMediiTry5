@@ -30,7 +30,7 @@ namespace ProiectMediiTry5.Pages.Jobs
                 return NotFound();
             }
 
-            var job =  await _context.Job.FirstOrDefaultAsync(m => m.Id == id);
+            var job =  await _context.Job.FirstOrDefaultAsync(m => m.ID == id);
             if (job == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace ProiectMediiTry5.Pages.Jobs
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!JobExists(Job.Id))
+                if (!JobExists(Job.ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ProiectMediiTry5.Pages.Jobs
 
         private bool JobExists(int id)
         {
-            return _context.Job.Any(e => e.Id == id);
+            return _context.Job.Any(e => e.ID == id);
         }
     }
 }

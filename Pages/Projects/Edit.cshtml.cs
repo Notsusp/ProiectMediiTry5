@@ -30,7 +30,7 @@ namespace ProiectMediiTry5.Pages.Projects
                 return NotFound();
             }
 
-            var project =  await _context.Project.FirstOrDefaultAsync(m => m.ProjectId == id);
+            var project =  await _context.Project.FirstOrDefaultAsync(m => m.ID == id);
             if (project == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace ProiectMediiTry5.Pages.Projects
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProjectExists(Project.ProjectId))
+                if (!ProjectExists(Project.ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ProiectMediiTry5.Pages.Projects
 
         private bool ProjectExists(int id)
         {
-            return _context.Project.Any(e => e.ProjectId == id);
+            return _context.Project.Any(e => e.ID == id);
         }
     }
 }

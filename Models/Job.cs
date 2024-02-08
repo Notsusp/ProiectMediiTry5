@@ -2,7 +2,7 @@
 {
     public class Job
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Titlu { get; set; }
         public string Descriere { get; set; }
         public DateTime TermenLimita { get; set; }

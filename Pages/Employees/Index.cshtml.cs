@@ -23,7 +23,8 @@ namespace ProiectMediiTry5.Pages.Employees
 
         public async Task OnGetAsync()
         {
-            Employee = await _context.Employee.Include(b => b.Department).ToListAsync();
+            Employee = await _context.Employee.Include(b => b.Department).Include(b => b.Project)
+.ToListAsync();
         }
     }
 }

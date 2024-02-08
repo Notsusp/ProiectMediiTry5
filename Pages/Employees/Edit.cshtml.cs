@@ -36,6 +36,8 @@ namespace ProiectMediiTry5.Pages.Employees
                 return NotFound();
             }
             Employee = employee;
+            ViewData["ProjectID"] = new SelectList(_context.Set<Project>(), "ID",
+"ProjectName");
             ViewData["DepartmentID"] = new SelectList(_context.Set<Department>(), "ID",
 "Name");
             return Page();

@@ -36,6 +36,12 @@
                 <span asp-validation-for="Employee.DepartmentID" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Employee.ProjectID" class="control-label">Project Name</label>
+                <select asp-for="Employee.ProjectID" class="form-control" asp-items="ViewBag.ProjectID">
+                </select>
+                <span asp-validation-for="Employee.ProjectID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

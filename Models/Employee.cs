@@ -10,5 +10,7 @@ namespace ProiectMediiTry5.Models
         public DateTime HireDate { get; set; }
         public int? DepartmentID { get; set; }
         public Department? Department { get; set; }
+        public int? ProjectID { get; set; }
+        public Project? Project { get; set; }
     }
 }

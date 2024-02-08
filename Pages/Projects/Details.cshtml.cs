@@ -28,7 +28,7 @@ namespace ProiectMediiTry5.Pages.Projects
                 return NotFound();
             }
 
-            var project = await _context.Project.FirstOrDefaultAsync(m => m.ProjectId == id);
+            var project = await _context.Project.FirstOrDefaultAsync(m => m.ID == id);
             if (project == null)
             {
                 return NotFound();

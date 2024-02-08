@@ -28,7 +28,7 @@ namespace ProiectMediiTry5.Pages.Jobs
                 return NotFound();
             }
 
-            var job = await _context.Job.FirstOrDefaultAsync(m => m.Id == id);
+            var job = await _context.Job.FirstOrDefaultAsync(m => m.ID == id);
             if (job == null)
             {
                 return NotFound();
